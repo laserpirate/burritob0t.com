@@ -34,9 +34,15 @@ set :root, File.dirname(__FILE__)
 # Application URL's
 
 get '/' do
-  "BurritoB0t Yeah!"
+  Burrito.all.inspect
 end
 
 get '/create' do
   erb :create
+end
+
+post '/create' do
+  b = Burrito.new(params[:burrito])
+  b.save
+  "Burrito Created!"
 end
