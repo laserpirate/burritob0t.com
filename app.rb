@@ -34,7 +34,12 @@ set :root, File.dirname(__FILE__)
 # Application URL's
 
 get '/' do
-  Burrito.all.inspect
+  
+end
+
+get '/last' do
+  @burrito = Burrito.last
+  erb :last
 end
 
 get '/create' do
