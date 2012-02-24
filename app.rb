@@ -2,7 +2,7 @@ require 'rubygems'
 require 'bundler'
 Bundler.require
 
-DataMapper.setup(:default, ENV["DATABASE_URL"])
+DataMapper.setup(:default, ENV["DATABASE_URL"] || 'sqlite3:data.db')
 
 class Burrito
   include DataMapper::Resource
