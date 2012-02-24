@@ -42,6 +42,10 @@ get '/last' do
   erb :last
 end
 
+get '/last-arduino' do
+  erb :last_arduino, :layout => false
+end
+
 get '/create' do
   erb :create
 end
