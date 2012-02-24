@@ -43,6 +43,7 @@ get '/last' do
 end
 
 get '/last-arduino' do
+  @burrito = Burrito.last
   erb :last_arduino, :layout => false
 end
 
