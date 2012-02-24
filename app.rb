@@ -38,5 +38,5 @@ get '/' do
 end
 
 get '/create' do
-  :create
+  erb :create
 end
